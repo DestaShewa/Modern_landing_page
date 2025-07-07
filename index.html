@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Modern Landing Page</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fade-in custom styles -->
+    <style>
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+      .fade-in-section.is-visible {
+        opacity: 1;
+        transform: none;
+      }
+    </style>
+  </head>
+  <body class="text-gray-800">
+    <!-- Header -->
+    <header
+      class="flex justify-between items-center p-6 bg-white shadow fixed w-full z-10"
+    >
+      <h1 class="text-xl font-bold">MyBrand</h1>
+      <nav class="space-x-4 hidden md:block">
+        <a href="#features" class="hover:text-blue-500">Features</a>
+        <a href="#testimonials" class="hover:text-blue-500">Testimonials</a>
+        <a href="#cta" class="hover:text-blue-500">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="flex flex-col items-center justify-center text-center py-40 px-4 bg-gray-50"
+    >
+      <h2
+        id="typewriter-text"
+        class="text-4xl md:text-5xl font-extrabold mb-4"
+      ></h2>
+      <p class="text-lg md:text-xl mb-8 max-w-2xl">
+        We help brands connect with customers through beautiful, high-converting
+        landing pages.
+      </p>
+      <a
+        href="#cta"
+        class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition transform hover:scale-105"
+        >Get Started</a
+      >
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="fade-in-section py-20 px-4 bg-white">
+      <div class="max-w-6xl mx-auto text-center mb-12">
+        <h3 class="text-3xl font-bold">Features</h3>
+        <p class="text-gray-600 mt-2">
+          Everything you need to build a powerful online presence.
+        </p>
+      </div>
+      <div class="grid gap-8 md:grid-cols-3">
+        <div
+          class="p-6 bg-gray-100 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105"
+        >
+          <h4 class="text-xl font-semibold mb-2">Fast Performance</h4>
+          <p>Optimized for speed and seamless user experience.</p>
+        </div>
+        <div
+          class="p-6 bg-gray-100 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105"
+        >
+          <h4 class="text-xl font-semibold mb-2">Responsive Design</h4>
+          <p>Looks great on all devices, from phones to desktops.</p>
+        </div>
+        <div
+          class="p-6 bg-gray-100 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105"
+        >
+          <h4 class="text-xl font-semibold mb-2">SEO Friendly</h4>
+          <p>Helps your site rank higher and reach more people.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="fade-in-section py-20 px-4 bg-gray-50">
+      <div class="max-w-6xl mx-auto text-center mb-12">
+        <h3 class="text-3xl font-bold">What Our Clients Say</h3>
+      </div>
+      <div id="testimonial-container" class="relative max-w-xl mx-auto">
+        <div class="testimonial p-6 bg-white rounded-lg shadow hidden">
+          <p class="mb-4">
+            "This landing page helped us double our signups! Highly recommend."
+          </p>
+          <h5 class="font-semibold">Jane Doe</h5>
+          <p class="text-gray-500 text-sm">Marketing Manager</p>
+        </div>
+        <div class="testimonial p-6 bg-white rounded-lg shadow hidden">
+          <p class="mb-4">
+            "A beautiful and fast design that impressed our customers."
+          </p>
+          <h5 class="font-semibold">John Smith</h5>
+          <p class="text-gray-500 text-sm">Startup Founder</p>
+        </div>
+        <div class="testimonial p-6 bg-white rounded-lg shadow hidden">
+          <p class="mb-4">
+            "Amazing experience working together. Professional and creative."
+          </p>
+          <h5 class="font-semibold">Sara Lee</h5>
+          <p class="text-gray-500 text-sm">Product Designer</p>
+        </div>
+
+        <div class="flex justify-center mt-6 space-x-4">
+          <button
+            id="prev-btn"
+            class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 transition"
+          >
+            Prev
+          </button>
+          <button
+            id="next-btn"
+            class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 transition"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      id="cta"
+      class="fade-in-section py-20 px-4 bg-blue-600 text-white text-center"
+    >
+      <h3 class="text-3xl font-bold mb-4">Ready to level up your brand?</h3>
+      <p class="mb-8">Let's create something amazing together today.</p>
+      <a
+        href="#hero"
+        class="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition transform hover:scale-105"
+        >Contact Us</a
+      >
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 bg-gray-800 text-gray-300 text-center">
+      <p>&copy; 2025 MyBrand. All rights reserved.</p>
+      <div class="mt-4 space-x-4">
+        <a href="#" class="hover:underline">About</a>
+        <a href="#" class="hover:underline">Privacy Policy</a>
+        <a href="#" class="hover:underline">Social</a>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
